@@ -596,3 +596,104 @@ body {
   .scanline { left: 13px; right: 13px; }
 }
 .tl-item.lit::before { background: var(--copper); border-color: #fff; box-shadow: 0 0 0 3px var(--copper), 0 0 12px rgba(200, 134, 47, 0.6); transition: background .3s, box-shadow .3s; }
+
+/* ==========================================================
+   Cards — friendlier, more polished
+   ========================================================== */
+.flow-step, .tl-card, .skill-card, .edu-card {
+  background-image: none;
+  border-radius: 16px;
+  border: 1px solid #e4e9f1;
+  box-shadow: 0 1px 2px rgba(15, 27, 45, 0.04), 0 8px 24px rgba(15, 27, 45, 0.05);
+  position: relative; overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+/* copper trace that grows along the top edge on hover */
+.flow-step::before, .tl-card::before, .skill-card::before, .edu-card::before {
+  content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 100%;
+  background: linear-gradient(90deg, var(--copper), #e9b874);
+  transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.flow-step:hover, .tl-card:hover, .skill-card:hover, .edu-card:hover {
+  transform: translateY(-4px);
+  border-color: #d3dceb;
+  box-shadow: 0 2px 4px rgba(15, 27, 45, 0.04), 0 18px 40px rgba(15, 27, 45, 0.10);
+}
+.flow-step:hover::before, .tl-card:hover::before, .skill-card:hover::before, .edu-card:hover::before { transform: scaleX(1); }
+
+/* Icon badges */
+.ico, .flow-step > i {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 46px; height: 46px; border-radius: 14px; font-size: 20px;
+  color: #fff; background: linear-gradient(140deg, var(--navy) 0%, var(--accent) 100%);
+  box-shadow: 0 6px 14px rgba(29, 78, 216, 0.22);
+  transition: background .25s, transform .25s;
+}
+.flow-step:hover > i, .skill-card:hover .ico, .edu-card:hover .ico {
+  background: linear-gradient(140deg, var(--copper) 0%, #e3a95b 100%);
+  box-shadow: 0 6px 14px rgba(200, 134, 47, 0.3);
+  transform: rotate(-4deg);
+}
+
+/* What I do now */
+.flow-step { padding: 28px 24px 26px; }
+.flow-step h3 { font-size: 1.1rem; margin: 18px 0 8px; }
+.flow-step p { line-height: 1.6; }
+.flow-num {
+  top: 22px; right: 22px; padding: 2px 9px; border-radius: 999px;
+  background: #fbf3e8; color: var(--copper); font-weight: 600; font-size: 11.5px;
+}
+
+/* Skills */
+.skill-card { padding: 24px; }
+.card-head { display: flex; gap: 14px; align-items: center; margin-bottom: 18px; }
+.card-head h3 { font-size: 1.06rem; margin: 0; display: block; }
+.card-sub { margin: 2px 0 0; font-size: 13.5px; color: var(--text-3); line-height: 1.4; }
+.skill-card.featured { border-top: 1px solid #e4e9f1; background: linear-gradient(180deg, #fffaf3 0%, #fff 60%); }
+.skill-card.featured .ico { background: linear-gradient(140deg, var(--copper) 0%, #e3a95b 100%); box-shadow: 0 6px 14px rgba(200, 134, 47, 0.3); }
+.chips span, .tags span {
+  border-radius: 999px; padding: 5px 12px;
+  background: #f3f6fa; border: 1px solid #e4e9f1; color: #2b3a52;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.chips span:hover, .tags span:hover { background: var(--accent-soft); border-color: #c9d8f6; color: var(--accent-2); }
+.skill-card.featured .chips span { background: #fdf1e2; border-color: #f2d7b1; color: #8a5414; }
+
+/* Experience */
+.tl-card { padding: 26px 30px; }
+.tl-item.current .tl-card { border-left: 1px solid #e4e9f1; background: linear-gradient(180deg, #f7faff 0%, #fff 45%); }
+.tl-item.current .tl-card::before { transform: scaleX(1); }
+.badge {
+  display: inline-flex; align-items: center; gap: 7px; margin-bottom: 10px;
+  padding: 3px 11px; border-radius: 999px;
+  font: 600 12px var(--font); color: var(--text-2);
+  background: #f3f6fa; border: 1px solid #e4e9f1;
+}
+.badge-live { color: #12703a; background: #eaf8ef; border-color: #c6ead3; }
+.badge-live .dot { width: 7px; height: 7px; border-radius: 50%; background: #22a35a; box-shadow: 0 0 0 3px rgba(34, 163, 90, 0.18); }
+.tl-card h3 { font-size: 1.18rem; }
+.tl-org { color: var(--accent); }
+.tl-card ul { margin: 18px 0 20px; }
+.tl-card li { padding-left: 24px; }
+.tl-card li::before {
+  width: 14px; height: 14px; left: 0; top: 5px; border-radius: 50%;
+  background: var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.2l2.6 2.6L12 5.4' fill='none' stroke='%231d4ed8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 10px no-repeat;
+}
+.tl-logo { height: 28px; opacity: .9; }
+
+/* Education */
+.edu-card { padding: 26px; }
+.edu-card .ico { margin-bottom: 16px; }
+.edu-card.cert .ico { background: linear-gradient(140deg, #15803d 0%, #22a35a 100%); box-shadow: 0 6px 14px rgba(21, 128, 61, 0.22); }
+.edu-date { display: inline-block; padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); letter-spacing: .04em; font-size: 11.5px; }
+.cert-list li a { border-radius: 999px; background: #fff; }
+.cert-list li a:hover { background: var(--accent-soft); border-color: #c9d8f6; }
+.langs { border-radius: 16px; border-color: #e4e9f1; }
+
+@media (max-width: 600px) {
+  .tl-card { padding: 20px; }
+  .flow-step, .skill-card, .edu-card { padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flow-step:hover, .tl-card:hover, .skill-card:hover, .edu-card:hover { transform: none; }
+}
