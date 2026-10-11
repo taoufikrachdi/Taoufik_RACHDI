@@ -1,954 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Portfolio of Taoufik RACHDI - Automotive Test and Validation Engineer" />
-    <meta name="author" content="Taoufik Rachdi" />
-    <title>Taoufik Rachdi</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/logo.png" />
-    <!-- Custom Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taoufik Rachdi — Test Bench Engineer</title>
+  <meta name="description" content="Portfolio of Taoufik RACHDI — Test Bench Engineer at SERMA Group: test bench design, PCB development in KiCad and automated test sequences for aeronautical equipment." />
+  <meta name="author" content="Taoufik Rachdi" />
+  <meta name="theme-color" content="#0a110e" />
+  <meta property="og:title" content="Taoufik Rachdi — Test Bench Engineer" />
+  <meta property="og:description" content="Test bench design & PCB development for aeronautical equipment · ex-automotive validation lead (Renault IVI)." />
+  <meta property="og:image" content="assets/profile-cutout.webp" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
 </head>
+<body>
+  <!-- Background traces -->
+  <svg class="bg-traces" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1440 900">
+    <g fill="none" stroke-width="1.5">
+      <path class="trace" d="M0 140 H260 L320 200 H620 L660 160 H900" />
+      <path class="trace" d="M1440 260 H1180 L1120 320 H860" />
+      <path class="trace" d="M0 620 H180 L240 560 H520" />
+      <path class="trace" d="M1440 720 H1260 L1200 780 H900 L860 740 H700" />
+    </g>
+    <g class="pads">
+      <circle cx="900" cy="160" r="5" /><circle cx="860" cy="320" r="5" />
+      <circle cx="520" cy="560" r="5" /><circle cx="700" cy="740" r="5" />
+    </g>
+  </svg>
 
-<body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
-            <div class="container px-5">
-                <a class="navbar-brand" href=""><span class="fw-bolder text-primary">TAOUFIK RACHDI</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                        <li class="nav-item"><a class="nav-link" href="">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </nav>
-<!-- Header-->
- <header class="py-5" id="mainHeader">
-
-    <div class="container px-5 pb-5">
-        <div class="row gx-5 align-items-center">
-            <div class="col-xxl-5">
-
-                <!-- Header text content-->
-                <div class="text-center text-xxl-start mt-5">
-                    
-                    <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Automotive Test And Validation Engineer</span></h1>
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                        <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="#contact">Contact Me</a>
-                        <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="#resume">Resume</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-xxl-7">
-            <!-- Header profile video -->
-<!-- Header profile video -->
-<div class="d-flex justify-content-center align-items-center mt-5 mt-xxl-0">
-  <div class="profile-video-wrapper" style="max-width: 800px; width: 100%; margin-top: 10%;">
-    <video
-      class="profile-video"
-      src="assets/video.mp4"
-      autoplay
-      loop
-      muted
-      playsinline
-      preload="auto"
-    ></video>
-  </div>
-</div>
-
-<!-- Styling -->
-<style>
-  .profile-video-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-  }
-
-  .profile-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .profile-video:hover {
-    transform: scale(1.02);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .profile-video {
-      transition: none !important;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .profile-video-wrapper {
-      margin-top: 20%;
-      padding: 0 10px;
-    }
-  }
-</style>
-
-
-
-            </div>
-        </div>
+  <!-- Navigation -->
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Taoufik Rachdi — home">
+        <span class="brand-chip">TR</span>
+        <span class="brand-name">Taoufik Rachdi</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <i class="bi bi-list"></i>
+      </button>
+      <nav id="navLinks" class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Current role</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-</header>
-
-<!-- Enhanced About Section -->
-<section class="py-5" id="aboutMeSection" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
-    <div class="container px-4">
-        <div class="row g-5 align-items-center justify-content-center">
-            <!-- About Text -->
-            <div class="col-lg-6 order-lg-1 order-2">
-                <div class="pe-lg-5">
-                    <h2 class="display-4 fw-bold mb-4 text-gradient-primary">
-                        About Me
-                    </h2>
-                    <div class="lead text-dark mb-4" style="font-size: 1.15rem; line-height: 1.7;">
-                        <p class="mb-4">
-                            Hello! I'm <span class="text-primary fw-bold">Taoufik RACHDI</span>, a passionate <span class="text-primary fw-bold">Automotive Test and Validation Engineer</span> with expertise in <span class="text-gradient-primary">embedded systems</span>, automotive diagnostics, and software testing. I am also <span class="text-primary">ISTQB Certified</span>, committed to delivering high-quality solutions with precision and innovation.
-                        </p>
-                        <p>
-                            With years of hands-on experience, I pride myself on delivering high-quality solutions, utilizing state-of-the-art technologies and a proactive approach to problem-solving. Collaboration, creativity, and commitment define my professional journey.
-                        </p>
-                    </div>
-                    
-                    <!-- Social Icons -->
-                    <div class="social-icons mt-4">
-                        <a class="btn btn-icon btn-lg btn-outline-primary rounded-circle me-2" href="https://www.linkedin.com/in/taoufik-rachdi-252932226/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a class="btn btn-icon btn-lg btn-outline-dark rounded-circle me-2" href="https://github.com/taoufikrachdi" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="GitHub">
-                            <i class="bi bi-github"></i>
-                        </a>
-                        <a class="btn btn-icon btn-lg btn-outline-danger rounded-circle" href="mailto:taoufik.rachdi@enis.tn" data-bs-toggle="tooltip" data-bs-placement="top" title="Email">
-                            <i class="bi bi-envelope-fill"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Profile Image -->
-            <div class="col-lg-6 order-lg-2 order-1 text-center mb-5 mb-lg-0">
-                <div class="profile-img-container position-relative">
-                    <div class="profile-frame"></div>
-                    <img src="assets/1737324852797.jpg" alt="Profile Picture" class="profile-img rounded-4 shadow-lg" loading="lazy">
-                    <div class="experience-badge">
-                        <span class="badge bg-primary rounded-pill px-3 py-2">
-                            <i class="bi bi-award-fill me-2"></i>2+ Years Experience
-                        </span>
-                    </div>
-                </div>
-            </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow"><span class="led"></span>Now at SERMA Group · Aeronautics</p>
+          <h1>Test Bench Engineer<span class="h1-sub">Test bench design &amp; PCB development</span></h1>
+          <p class="lede">
+            I design the benches that prove aeronautical equipment works — from the
+            <strong>KiCad schematic</strong> of the test bench board to the
+            <strong>automated sequence</strong> that runs every step of the ATP.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact"><i class="bi bi-send"></i>Get in touch</a>
+            <a class="btn btn-ghost" href="assets/CV Taoufik Rachdi.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down"></i>CV · EN</a>
+            <a class="btn btn-ghost" href="assets/CV RACHDI-Taoufik.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down"></i>CV · FR</a>
+          </div>
+          <ul class="hero-meta">
+            <li><i class="bi bi-geo-alt"></i>Ariana, Tunisia · hybrid</li>
+            <li><i class="bi bi-patch-check"></i>ISTQB CTFL certified</li>
+          </ul>
         </div>
+
+        <div class="hero-visual reveal">
+          <div class="portrait">
+            <span class="portrait-ring"></span>
+            <img src="assets/profile-cutout.webp" alt="Portrait of Taoufik Rachdi" width="537" height="820" />
+          </div>
+          <!-- Live test console -->
+          <div class="console" aria-label="Example automated test sequence">
+            <div class="console-bar">
+              <span></span><span></span><span></span>
+              <code>atp_sequence.run</code>
+            </div>
+            <ol class="console-body" id="consoleBody"></ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap stats reveal">
+        <div class="stat"><span class="stat-n">3+</span><span class="stat-l">years in test &amp; validation</span></div>
+        <div class="stat"><span class="stat-n">2</span><span class="stat-l">industries · aero &amp; automotive</span></div>
+        <div class="stat"><span class="stat-n">KiCad</span><span class="stat-l">test bench PCB design</span></div>
+        <div class="stat"><span class="stat-n">ATP→Auto</span><span class="stat-l">procedures into sequences</span></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="section-head reveal">
+          <span class="ref">REF A1</span>
+          <h2>About</h2>
+        </div>
+        <div class="about-body reveal">
+          <p>
+            I'm <strong>Taoufik Rachdi</strong>, an electrical engineer (ENIS, embedded electronics &amp;
+            instrumentation) working where hardware meets test. Since September 2026 I've been a
+            <strong>Test Bench Engineer at SERMA Group</strong>, designing test benches and their PCBs for
+            aeronautical equipment and turning acceptance test procedures into automated test sequences.
+          </p>
+          <p>
+            Before that I spent three years in <strong>automotive validation for the Renault Alliance</strong>,
+            finishing as lead for the Diagnostic (Diag/DTC) and Digital Avatar functions on the IVI 2 infotainment
+            platform. That background shapes how I build benches: I design them for the person who has to run
+            the campaign, trace the requirements, and trust the result.
+          </p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/taoufik-rachdi-252932226/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/taoufikrachdi" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="mailto:taoufik.rachdi@enis.tn" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current role -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="ref">REF U1</span>
+          <h2>What I do now</h2>
+          <p class="section-sub">Test Bench Engineer — Test Bench Design &amp; PCB Development · SERMA Group</p>
+        </div>
+
+        <div class="flow reveal">
+          <article class="flow-step">
+            <span class="flow-num">01</span>
+            <i class="bi bi-diagram-3"></i>
+            <h3>Bench architecture</h3>
+            <p>Define what the bench must stimulate and measure for the equipment under test, and how it connects to instruments and the UUT.</p>
+          </article>
+          <article class="flow-step">
+            <span class="flow-num">02</span>
+            <i class="bi bi-cpu"></i>
+            <h3>PCB in KiCad</h3>
+            <p>Schematic capture, component choice, layout and documentation of the test bench boards.</p>
+          </article>
+          <article class="flow-step">
+            <span class="flow-num">03</span>
+            <i class="bi bi-list-check"></i>
+            <h3>ATP → sequences</h3>
+            <p>Translate Acceptance Test Procedures into automated test sequences that run repeatably on the bench.</p>
+          </article>
+          <article class="flow-step">
+            <span class="flow-num">04</span>
+            <i class="bi bi-airplane"></i>
+            <h3>Aeronautical equipment</h3>
+            <p>Benches built for the rigour of aero qualification: traceable steps, clear verdicts, reproducible results.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="ref">REF J2</span>
+          <h2>Experience</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item current reveal">
+            <div class="tl-date">Sep 2026 — Present</div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3>Test Bench Engineer — Test Bench Design &amp; PCB Development</h3>
+                  <p class="tl-org">SERMA Group · Aeronautics · Ariana, Tunisia (hybrid)</p>
+                </div>
+                <img class="tl-logo" src="assets/serma-group-gris.png" alt="SERMA Group" />
+              </div>
+              <ul>
+                <li>Design test benches for aeronautical equipment.</li>
+                <li>Design test bench PCBs in KiCad — schematic, layout, documentation.</li>
+                <li>Convert ATPs (Acceptance Test Procedures) into automated test sequences.</li>
+              </ul>
+              <div class="tags"><span>KiCad</span><span>PCB design</span><span>Test bench</span><span>ATP</span><span>Test automation</span></div>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-date">Jul 2024 — Sep 2026</div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3>Lead — Diagnostic (Diag/DTC) &amp; PVS Digital Avatar</h3>
+                  <p class="tl-org">SERMA · Client: Renault Alliance · IVI 2 In-Vehicle Infotainment</p>
+                </div>
+              </div>
+              <ul>
+                <li>Led validation of the Diag/DTC and Digital Avatar functions: test strategy, planning, requirement traceability.</li>
+                <li>Built automated test suites with Robot Framework and Selenium.</li>
+                <li>Wrote and reviewed PVAL validation plans; ran campaigns in Codebeamer; managed defects in Jira.</li>
+                <li>CAN and diagnostic analysis with CANalyzer, CANoe and Wireshark; CAPL and Bash scripting.</li>
+              </ul>
+              <div class="tags"><span>Robot Framework</span><span>Selenium</span><span>Codebeamer</span><span>Jira</span><span>CANoe</span><span>CANalyzer</span><span>CAPL</span><span>Wireshark</span></div>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-date">Jul 2023 — Jul 2024</div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3>Validation Engineer — Diag/DTC Function</h3>
+                  <p class="tl-org">SERMA · Client: Renault-Nissan-Mitsubishi Alliance · IVI 2</p>
+                </div>
+              </div>
+              <ul>
+                <li>Functional and non-functional test campaigns in Silk Central.</li>
+                <li>Integration, regression and validation testing.</li>
+                <li>CAPL scripts for CAN test automation; XML diagnostic scripts with DDT2000.</li>
+              </ul>
+              <div class="tags"><span>Silk Central</span><span>CAPL</span><span>DDT2000</span><span>UDS</span><span>CAN</span></div>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-date">Feb 2023 — Jun 2023</div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3>Final Year Project — IoT Gas &amp; Fire Detection</h3>
+                  <p class="tl-org">Smart Ways Innovation · Sfax, Tunisia</p>
+                </div>
+              </div>
+              <ul>
+                <li>ESP32-based detection system with gas, flame and DHT11 sensors.</li>
+                <li>Custom PCB designed in Altium Designer.</li>
+                <li>Companion mobile app and web platform (Android Studio, Angular, Laravel).</li>
+              </ul>
+              <div class="tags"><span>ESP32</span><span>Altium Designer</span><span>Angular</span><span>Laravel</span><span>Android</span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="ref">REF S3</span>
+          <h2>Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card featured reveal">
+            <h3><i class="bi bi-motherboard"></i>Hardware &amp; test benches</h3>
+            <div class="chips"><span>KiCad</span><span>Altium Designer</span><span>PCB design</span><span>Test bench design</span><span>Bench testing</span><span>Hardware diagnostics</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3><i class="bi bi-check2-square"></i>Test &amp; validation</h3>
+            <div class="chips"><span>Manual testing</span><span>Automated testing</span><span>Test strategy</span><span>Requirement traceability</span><span>Codebeamer</span><span>Jira</span><span>Xray</span><span>Silk Central</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3><i class="bi bi-robot"></i>Automation</h3>
+            <div class="chips"><span>Robot Framework</span><span>Selenium</span><span>Playwright</span><span>CAPL</span><span>Python</span><span>Shell / Bash</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3><i class="bi bi-hdd-network"></i>Buses &amp; tools</h3>
+            <div class="chips"><span>CAN</span><span>LIN</span><span>UDS</span><span>UART</span><span>I2C</span><span>CANoe</span><span>CANalyzer</span><span>DDT2000</span><span>Wireshark</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3><i class="bi bi-cpu"></i>Embedded</h3>
+            <div class="chips"><span>STM32</span><span>ESP32</span><span>FPGA</span><span>Raspberry Pi</span><span>Embedded C</span><span>C / C++</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3><i class="bi bi-code-slash"></i>Software</h3>
+            <div class="chips"><span>Java</span><span>JavaScript</span><span>HTML / CSS</span><span>Angular</span><span>Laravel</span><span>Android Studio</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & certifications -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="ref">REF E4</span>
+          <h2>Education &amp; certifications</h2>
+        </div>
+
+        <div class="edu-grid">
+          <article class="edu-card reveal">
+            <span class="edu-date">2020 — 2023</span>
+            <h3>Engineering Degree, Electrical Engineering</h3>
+            <p class="edu-org">National Engineering School of Sfax (ENIS)</p>
+            <p>Specialisation in Embedded Electronics &amp; Instrumentation.</p>
+          </article>
+          <article class="edu-card reveal">
+            <span class="edu-date">2018 — 2020</span>
+            <h3>Preparatory Cycle, Physics &amp; Chemistry</h3>
+            <p class="edu-org">ISSAT Gabès</p>
+            <p>Foundation in mathematics and physical sciences for engineering studies.</p>
+          </article>
+          <article class="edu-card cert reveal">
+            <span class="edu-date">Certifications</span>
+            <ul class="cert-list">
+              <li><i class="bi bi-patch-check-fill"></i>ISTQB Certified Tester — Foundation Level (CTFL)
+                <a href="assets/ISTQB.pdf" target="_blank" rel="noopener">View</a></li>
+              <li><i class="bi bi-patch-check"></i>Manual &amp; Automated Testing — CSF Training Center</li>
+            </ul>
+            <span class="edu-date">Training</span>
+            <ul class="cert-list muted">
+              <li><i class="bi bi-dot"></i>Automotive Cybersecurity (Udemy)</li>
+              <li><i class="bi bi-dot"></i>CAPL Programming (Udemy)</li>
+              <li><i class="bi bi-dot"></i>STM32 (CSF Training Center)</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="langs reveal">
+          <span class="langs-label">Languages</span>
+          <div class="lang"><span>Arabic</span><i style="--v:100%"></i><em>Native</em></div>
+          <div class="lang"><span>French</span><i style="--v:85%"></i><em>Professional</em></div>
+          <div class="lang"><span>English</span><i style="--v:70%"></i><em>Upper-intermediate</em></div>
+          <div class="lang"><span>Spanish</span><i style="--v:25%"></i><em>Beginner</em></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="reveal">
+          <div class="section-head">
+            <span class="ref">REF C5</span>
+            <h2>Let's talk benches.</h2>
+          </div>
+          <p class="contact-lede">Test bench design, PCB work, or test automation — send me a message and I'll get back to you.</p>
+          <ul class="contact-list">
+            <li><i class="bi bi-envelope"></i><a href="mailto:taoufik.rachdi@enis.tn">taoufik.rachdi@enis.tn</a></li>
+            <li><i class="bi bi-telephone"></i><a href="tel:+21621647646">+216 21 647 646</a></li>
+            <li><i class="bi bi-linkedin"></i><a href="https://www.linkedin.com/in/taoufik-rachdi-252932226/" target="_blank" rel="noopener">linkedin.com/in/taoufik-rachdi</a></li>
+            <li><i class="bi bi-geo-alt"></i>Ariana, Tunisia</li>
+          </ul>
+        </div>
+
+        <form id="contactForm" class="form reveal" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="opt">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button class="btn btn-primary btn-block" id="submitButton" type="submit"><i class="bi bi-send"></i>Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>&copy; <span id="currentYear"></span> Taoufik Rachdi</span>
+      <span class="mono">Test Bench Engineer · SERMA Group</span>
+      <a href="#top" class="to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
     </div>
+  </footer>
 
-    <!-- Styling -->
-    <style>
-        #aboutMeSection {
-            padding: 5rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .text-gradient-primary {
-            background: linear-gradient(90deg, #007bff, #6f42c1);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
-        }
-        
-        .profile-img-container {
-            position: relative;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        
-        .profile-img {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: cover;
-            position: relative;
-            z-index: 2;
-            border: 8px solid white;
-            transition: all 0.4s ease;
-        }
-        
-        .profile-frame {
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            right: 15px;
-            bottom: 15px;
-            background: linear-gradient(135deg, #0c3dff, #f70ad4);
-            border-radius: 20px;
-            z-index: 1;
-            opacity: 0.2;
-            transition: all 0.4s ease;
-        }
-        
-        .experience-badge {
-            position: absolute;
-            bottom: -15px;
-            right: 30px;
-            z-index: 3;
-            transform: rotate(5deg);
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .social-icons .btn-icon {
-            width: 50px;
-            height: 50px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icons .btn-icon:hover {
-            transform: translateY(-5px) scale(1.1);
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(5deg); }
-            50% { transform: translateY(-10px) rotate(5deg); }
-        }
-        
-        @media (max-width: 991.98px) {
-            #aboutMeSection {
-                padding: 3rem 0;
-            }
-            
-            .profile-img {
-                max-height: 350px;
-            }
-        }
-    </style>
-</section>
-        <!-- Call to Action Section-->
-        <section class="py-5 bg-gradient-primary-to-secondary text-white">
-            <div class="container px-5 my-5">
-                <div class="text-center">
-                    <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-                    <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="#contact">Contact me</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resume Section-->
-        <div class="container px-5 my-5" id="resume">
-            <div class="text-center mb-5">
-                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Resume</span></h1>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-11 col-xl-9 col-xxl-8">
-                    <!-- Experience Section-->
-                    <section>
-                        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between mb-4">
-                            <!-- Section Title -->
-                            <h2 class="text-primary fw-bolder mb-3 mb-md-0 animate__animated animate__fadeInLeft">
-                                Experience
-                            </h2>
-                        
-                            <!-- Buttons Group -->
-                            <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-md-start animate__animated animate__fadeInRight">
-                                <!-- Download CV Button -->
-                                <a class="btn btn-primary px-4 py-3 btn-hover-gradient" href="assets/CV RACHDI-Taoufik.pdf" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Download My CV">
-                                    <div class="d-inline-block bi bi-download me-2"></div>
-                                   CV - FR
-                                </a>
-                                 <a class="btn btn-primary px-4 py-3 btn-hover-gradient" href="assets/CV Taoufik Rachdi.pdf" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Download My CV">
-                                    <div class="d-inline-block bi bi-download me-2"></div>
-                                   CV - EN
-                                </a>
-                        
-                                <!-- Download ISTQB Certificate Button -->
-                                <a class="btn btn-primary px-4 py-3 btn-hover-gradient" href="assets/ISTQB.pdf" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Download ISTQB Certification">
-                                    <div class="d-inline-block bi bi-download me-2"></div>
-                                    ISTQB Certification
-                                </a>
-                            </div>
-                        </div>
-                        
-                        
-                        <!-- Styling -->
-                        <style>
-                            /* Gradient Hover Effect for Buttons */
-                            .btn-hover-gradient {
-                                background: linear-gradient(90deg, #007bff, #6f42c1);
-                                border: none;
-                                color: white;
-                                transition: all 0.3s ease;
-                            }
-                        
-                            .btn-hover-gradient:hover {
-                                background: linear-gradient(90deg, #6f42c1, #007bff);
-                                transform: translateY(-2px);
-                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                            }
-                        
-                            /* Animation for Section Title and Buttons */
-                            .animate__animated {
-                                animation-duration: 1s;
-                            }
-                        
-                            .animate__fadeInLeft {
-                                animation-name: fadeInLeft;
-                            }
-                        
-                            .animate__fadeInRight {
-                                animation-name: fadeInRight;
-                            }
-                        
-                            @keyframes fadeInLeft {
-                                from {
-                                    opacity: 0;
-                                    transform: translateX(-20px);
-                                }
-                                to {
-                                    opacity: 1;
-                                    transform: translateX(0);
-                                }
-                            }
-                        
-                            @keyframes fadeInRight {
-                                from {
-                                    opacity: 0;
-                                    transform: translateX(20px);
-                                }
-                                to {
-                                    opacity: 1;
-                                    transform: translateX(0);
-                                }
-                            }
-                        </style>
-                        
-                        <!-- Bootstrap Tooltip Initialization -->
-                        <script>
-                            // Enable Bootstrap tooltips
-                            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-                            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                                return new bootstrap.Tooltip(tooltipTriggerEl);
-                            });
-                        </script>
-
-                        <!-- Experience Card 1-->
-                        <div class="card shadow border-0 rounded-4 mb-5">
-                            <div class="card-body p-4">
-                                <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4 shadow-sm">
-                                            <!-- Date -->
-                                            <div class="text-primary fw-bolder mb-2">
-                                                <i class="fas fa-calendar-alt me-2"></i>July 2023 – Present
-                                            </div>
-                                            <!-- Job Title -->
-                                            <div class="small fw-bolder mb-2">
-                                                <i class="fas fa-briefcase me-2"></i>Automotive Test and Validation Engineer
-                                            </div>
-                                            <!-- Company Name with Logo -->
-                                            <div class="small text-muted mb-2 d-flex align-items-center">
-                                                <img src="assets/serma-group-gris.png" alt="SERMA Logo" class="me-2" style="width:50%; height: 40px;">
-                                                SERMA International
-                                                <br>
-                                            </div>
-                                            <!-- Location -->
-                                            <div class="small text-muted">
-                                                <i class="fas fa-map-marker-alt me-2"></i>Tunisia, Ariana
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                  
-                                    <div class="col-lg-8">
-                                        <div>
-                                            <strong>Client:</strong> Alliance Renault<br>
-                                            <strong>Project:</strong> Automotive In-Vehicle Infotainment (A IVI 2)<br>
-                                            <strong>Mission:</strong>
-                                            <ul>
-                                                <i class="fas fa-check-circle text-primary me-2"></i>System and acceptance testing.<br>
-                                                <i class="fas fa-check-circle text-primary me-2"></i>Test plan creation, verification, and validation.<br>
-                                                <i class="fas fa-check-circle text-primary me-2"></i>Test automation and manual test creation.<br>
-                                                <i class="fas fa-check-circle text-primary me-2"></i>Test environment setup.<br>
-                                                <i class="fas fa-check-circle text-primary me-2"></i>Analysis of test results and creation of validation reports.<br>
-                                                <i class="fas fa-check-circle text-primary me-2"></i>Execution of tests using Vector CANalyzer and DDT2000.<br>
-                                                <i class="fas fa-check-circle text-primary me-2"></i>Bug detection and reporting using Jira.<br>
-                                                <i class="fas fa-check-circle text-primary me-2"></i>Diagnostic and DTC testing.<br>
-                                                <i class="fas fa-check-circle text-primary me-2"></i>Participation in client meetings.<br>
-                                            </ul>
-                                            <h5 class="fw-bolder mb-3">Tools:</h5>
-                                            <div class="d-flex flex-wrap gap-2">
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-tools me-2"></i>Vector CANalyzer
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-network-wired me-2"></i>CANoe
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-bus me-2"></i>LIN BUS
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-code me-2"></i>CAPL
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-toolbox me-2"></i>DDT2000
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-chart-line me-2"></i>Silk Central
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-bug me-2"></i>Jira
-                                                </span>
-                                            </div>                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card shadow border-0 rounded-4 mb-5">
-                            <div class="card-body p-5">
-                                <div class="row align-items-center gx-5">
-                                    <!-- Left Column: Date and Project Details -->
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4 shadow-sm">
-                                            <!-- Date -->
-                                            <div class="text-primary fw-bolder mb-2">
-                                                <i class="fas fa-calendar-alt me-2"></i>February 2023 – June 2023
-                                            </div>
-                                            <!-- Project Title -->
-                                            <div class="small fw-bolder mb-2">
-                                                <i class="fas fa-project-diagram me-2"></i>Final Year Project
-                                            </div>
-                                            <!-- Company Name -->
-                                            <div class="small text-muted mb-2">
-                                                <i class="fas fa-building me-2"></i>Smart Ways Innovation
-                                            </div>
-                                            <!-- Location -->
-                                            <div class="small text-muted">
-                                                <i class="fas fa-map-marker-alt me-2"></i>Tunisia, Sfax
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Right Column: Project Details -->
-                                    <div class="col-lg-8">
-                                        <div>
-                                            <strong>Project:</strong> Design and Implementation of a Gas Leak and Fire Detection System based on IoT.<br>
-                                            <strong style="margin-top: 2px;">Mission:</strong>                                       
-                                            <ul class="list-unstyled">
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-primary me-2"></i>
-                                                    Development of a mobile application and website.
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-primary me-2"></i>
-                                                    Implementation of the detection system using gas, flame, and DHT11 sensors.
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-primary me-2"></i>
-                                                    PCB design using Altium Designer.
-                                                </li>
-                                                <li class="mb-2">
-                                                    <i class="fas fa-check-circle text-primary me-2"></i>
-                                                    IoT system development using ESP32.
-                                                </li>
-                                            </ul>
-                                            <h5 class="fw-bolder mb-3">Tools:</h5>
-                                            <div class="d-flex flex-wrap gap-2">
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fab fa-angular me-2"></i>Angular
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fab fa-android me-2"></i>Android Studio
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fab fa-laravel me-2"></i>Laravel
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-microchip me-2"></i>Raspberry Pi
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-microchip me-2"></i>Altium Designer
-                                                </span>
-                                                <span class="badge bg-primary bg-gradient">
-                                                    <i class="fas fa-code me-2"></i>C/C++
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                  
-                     
-                    </section>
-
-                    <!-- Education Section-->
-                    <section>
-                        <h2 class="text-secondary fw-bolder mb-4">Education</h2>
-
-                        <!-- Education Card 1-->
-                        <div class="card shadow border-0 rounded-4 mb-5">
-                            <div class="card-body p-5">
-                                <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
-                                            <div class="text-secondary fw-bolder mb-2"><i class="fas fa-calendar-alt me-2 text-secondary"></i>2020 – 2023</div>
-                                            <div class="mb-2">
-                                                <div class="small fw-bolder"><i class="fas fa-university me-2 text-secondary"></i>National School of Engineers of Sfax (ENIS)</div>
-                                                <div class="small text-muted"> <i class="fas fa-map-marker-alt me-2 text-secondary"></i>Tunisia, Sfax</div>
-                                            </div>
-                                            <div class="fst-italic">
-                                                <div class="small text-muted"><i class="fas fa-graduation-cap me-2 text-secondary"></i>Electrical Engineering</div>
-                                                <div class="small text-muted"><i class="fas fa-microchip me-2 text-secondary"></i>Specialization: Embedded Electronics and Instrumentation</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div>
-                                            <h4 class="fw-bolder mb-3">Electrical Engineering</h4>
-                                            <p class="text-muted">
-                                                Focused on embedded systems, electronics, and instrumentation. Gained hands-on experience in designing and implementing embedded solutions.
-                                            </p>                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Education Card 2-->
-                        <div class="card shadow border-0 rounded-4 mb-5">
-                            <div class="card-body p-5">
-                                <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
-                                            <div class="text-secondary fw-bolder mb-2"><i class="fas fa-calendar-alt me-2 text-secondary"></i>2018 – 2020</div>
-                                            <div class="mb-2">
-                                                <div class="small fw-bolder"><i class="fas fa-university me-2 text-secondary"></i>Higher Institute of Applied Sciences and Technology of Gabes (ISSAT)</div>
-                                                <div class="small text-muted"> <i class="fas fa-map-marker-alt me-2 text-secondary"></i>Tunisia, Gabes</div>
-                                            </div>
-                                            <div class="fst-italic">
-                                                <div class="small text-muted"><i class="fas fa-graduation-cap me-2 text-secondary" ></i>Preparatory Cycle: Physics-Chemistry</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div>
-                                            <h4 class="fw-bolder mb-3">Preparatory Cycle: Physics-Chemistry</h4>
-                                            <p class="text-muted">
-                                                Completed a preparatory program in physics and chemistry, laying the foundation for engineering studies.
-                                            </p>                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Skills Section-->
-                    <section id="skills">
-                        <h2 class="text-primary fw-bolder mb-4">Skills</h2>
-                        <div class="card shadow border-0 rounded-4 mb-5">
-                            <div class="card-body p-5">
-                                <!-- Testing Tools -->
-                                <div class="mb-5">
-                                    <div class="d-flex align-items-center mb-4">
-                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                                            <i class="bi bi-tools"></i>
-                                        </div>
-                                        <h3 class="fw-bolder mb-0">
-                                            <span class="text-gradient d-inline">Testing Tools</span>
-                                        </h3>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-file-earmark-text me-2 text-muted"></i> Automated Testing
-                                            </div>
-                                        </div>
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-gear me-2 text-muted"></i> Test Bench
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-person me-2 text-muted"></i> Test Manuel
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-diagram-3 me-2 text-muted"></i> Vector CANalyzer
-                                            </div>
-                                        </div>
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-hdd-network me-2 text-muted"></i> CAN bus
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-hdd-network me-2 text-muted"></i> CANoe
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-hdd-network me-2 text-muted"></i> LIN BUS
-                                            </div>
-                                        </div>
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-code-slash me-2 text-muted"></i> CAPL
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-tools me-2 text-muted"></i> Hardware Diagnostics
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-file-earmark-text me-2 text-muted"></i> DDT2000
-                                            </div>
-                                        </div>
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-kanban me-2 text-muted"></i> Silk Central
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-bug me-2 text-muted"></i> Jira
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                    
-                                <!-- Programming Languages -->
-                                <div class="mb-5">
-                                    <div class="d-flex align-items-center mb-4">
-                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                                            <i class="bi bi-code-slash"></i>
-                                        </div>
-                                        <h3 class="fw-bolder mb-0">
-                                            <span class="text-gradient d-inline">Programming Languages</span>
-                                        </h3>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <img src="assets/c++.jpg" alt="C++" class="me-2" style="width: 24px;"> C++
-                                            </div>
-                                        </div>
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <img src="assets/C.jpg" alt="C" class="me-2" style="width: 24px;"> C
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <img src="assets/C.jpg" alt="Embedded C" class="me-2" style="width: 24px;"> Embedded C
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="fab fa-java me-2 text-muted"></i> Java
-                                            </div>
-                                        </div>
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="fab fa-python me-2 text-muted"></i> Python
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="fab fa-js-square me-2 text-muted"></i> JavaScript
-                                            </div>
-                                        </div>
-                                        
-                                      
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <img src="assets/php.png" alt="PHP" class="me-2" style="width: 24px;"> PHP
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                    
-                                <!-- Embedded Systems -->
-                                <div class="mb-5">
-                                    <div class="d-flex align-items-center mb-4">
-                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                                            <i class="bi bi-motherboard"></i>
-                                        </div>
-                                        <h3 class="fw-bolder mb-0">
-                                            <span class="text-gradient d-inline">Embedded Systems</span>
-                                        </h3>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-cpu me-2 text-muted " ></i> STM32
-                                            </div>
-                                        </div>
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-cpu me-2 text-muted"></i> Raspberry Pi
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-cpu me-2 text-muted"></i> ESP32
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-cpu me-2 text-muted"></i> FPGA
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                    
-                                <!-- Web Development -->
-                                <div class="mb-5">
-                                    <div class="d-flex align-items-center mb-4">
-                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                                            <i class="bi bi-globe"></i>
-                                        </div>
-                                        <h3 class="fw-bolder mb-0">
-                                            <span class="text-gradient d-inline">Web Development</span>
-                                        </h3>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="fab fa-angular me-2 text-muted"></i> Angular
-                                            </div>
-                                        </div>
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="fab fa-laravel me-2 text-muted"></i> Laravel
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                    
-                                <!-- PCB Design -->
-                                <div class="mb-5">
-                                    <div class="d-flex align-items-center mb-4">
-                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                                            <i class="bi bi-pc-display"></i>
-                                        </div>
-                                        <h3 class="fw-bolder mb-0">
-                                            <span class="text-gradient d-inline">Hardware</span>
-                                        </h3>
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-pc-display me-2 text-muted"></i> Altium Designer
-                                            </div>
-                                        </div>
-                                        <div class="col mb-4 mb-md-0">
-                                            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                <i class="bi bi-pc-display me-2 text-muted"></i> PCB Design
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                   <!-- Contact Section -->
-<section class="py-5" id="contact">
-    <div class="card border-0 rounded-4 mb-5">
-        <!-- Contact form -->
-        <div class="bg-gradient-primary-to-secondary text-white rounded-4 py-5 px-4 px-md-5">
-            <div class="text-center mb-5">
-                <div class="feature bg-white bg-gradient text-primary rounded-3 mb-3">
-                    <i class="bi bi-envelope fs-1"></i>
-                </div>
-                <h1 class="fw-bolder">Get in Touch</h1>
-                <p class="lead fw-normal text-white-50 mb-0">Let's work together!</p>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-10 col-xl-8">
-                    <form id="contactForm" action="https://formspree.io/f/xvoeobqn" method="POST" onsubmit="submitForm(event)">
-                        <!-- Name input -->
-                        <div class="form-floating mb-4">
-                            <input class="form-control" required id="name" name="name" type="text" placeholder="Enter your name..." />
-                            <label for="name" class="text-muted">
-                                <i class="fas fa-user me-2"></i>Full Name
-                            </label>
-                        </div>
-                        <!-- Email address input -->
-                        <div class="form-floating mb-4">
-                            <input class="form-control" required id="email" name="email" type="email" placeholder="name@example.com" />
-                            <label for="email" class="text-muted">
-                                <i class="fas fa-envelope me-2"></i>Email Address
-                            </label>
-                        </div>
-                        <!-- Phone number input -->
-                        <div class="form-floating mb-4">
-                            <input class="form-control" required id="phone" name="phone" type="tel" placeholder="(123) 456-7890" />
-                            <label for="phone" class="text-muted">
-                                <i class="fas fa-phone me-2"></i>Phone Number
-                            </label>
-                        </div>
-                        <!-- Message input -->
-                        <div class="form-group mb-4 position-relative">
-                            <label for="message" class="form-label position-absolute top-0 start-0 p-3 text-muted">
-                                <i class="fas fa-comment me-2"></i>Message
-                            </label>
-                            <textarea class="form-control" required id="message" name="message" placeholder="" style="height: 12rem; padding-top: 2.5rem;"></textarea>
-                        </div>
-                        
-                        <!-- Submit Button -->
-                        <div class="d-grid">
-                            <button class="btn btn-light btn-lg fw-bold text-primary hover-scale" id="submitButton" type="submit">
-                                <i class="fas fa-paper-plane me-2"></i>Submit
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-    <button class="btn bg-gradient-primary-to-secondary btn-lg rounded-circle shadow hover-scale hover-shadow" onclick="scrollToTop()" id="scrollToTopBtn" style="position: fixed; bottom: 20px; right: 20px; display: none;">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-          
-                </div>
-            </div>
-        </div>
-    </main>
-      <!-- Footer -->
-      <footer class="bg-dark text-white py-5">
-        
-        <div class="container">
-            <!-- About Section -->
-            <div class="row mb-5">
-                <div class="col-lg-4">
-                    <h5>About Me</h5>
-                    <p class="text-muted">
-                        I am an experienced Automotive Test and Validation Engineer, specializing in embedded systems and innovative solutions for the automotive industry.
-                    </p>
-                </div>
-    
-                <!-- Links Section -->
-                <div class="col-lg-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled" >
-                        <li><a href="" style="text-decoration: none;">Portfolio</a></li>
-                        <li><a href="#skills" style="text-decoration: none;">Skills</a></li>
-                        <li><a href="#contact" style="text-decoration: none;">Contact</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Contact Information Section -->
-                <div class="col-lg-4" >
-                    <h5>Contact Information</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-envelope me-2"></i> <a href="mailto:taoufik.rachdi@enis.tn" style="text-decoration: none;">taoufik.rachdi@enis.tn</a></li>
-                        <li>
-                            <i class="fas fa-phone me-2"></i>
-                            <a href="tel:+21621647646" style="text-decoration: none;">+216 21 647 646</a>
-                        </li>                       
-                         <li><i class="fas fa-map-marker-alt me-2"></i> Tunis, Tunisia</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <!-- Social Media  -->
-            <div class="row justify-content-center align-items-center mb-4">
-                <div class="col-lg-6 text-center">
-                    <h5>Stay Connected</h5>
-                    <p class="text-muted">Follow me on my social platforms for more updates and collaborations.</p>
-                    <div class="d-flex justify-content-center">
-                        <a href="https://www.linkedin.com/in/taoufik-rachdi-252932226/" target="_blank" class="me-3 icon" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/taoufikrachdi" target="_blank" class="me-3 icon" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:taoufik.rachdi@enis.tn" class="icon" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Divider -->
-            <hr class="my-4">
-            <!-- Copyright Section -->
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="small text-muted mb-0">
-                        &copy; <span id="currentYear"></span> Taoufik RACHDI. All Rights Reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Script for Current Year -->
-        <script>
-            document.getElementById("currentYear").textContent = new Date().getFullYear();
-        </script>
-    </footer>
-    
-    </main>
-
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <!-- sweetalert2 Library-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/scripts.js"></script>
 </body>
-
 </html>

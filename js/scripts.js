@@ -1,94 +1,152 @@
-window.onscroll = function() {scrollFunction()};
+// Taoufik Rachdi — portfolio scripts
+(function () {
+  "use strict";
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("scrollToTopBtn").style.display = "block";
-  } else {
-    document.getElementById("scrollToTopBtn").style.display = "none";
-  }
-}
+  // Year in footer
+  var year = document.getElementById("currentYear");
+  if (year) year.textContent = new Date().getFullYear();
 
-function scrollToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+  // Sticky nav border + mobile menu
+  var nav = document.querySelector(".nav");
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.getElementById("navLinks");
 
-document.addEventListener("DOMContentLoaded", function() {
-  const animationSection = document.getElementById('animationSection');
-  let animationTriggered = false;
+  window.addEventListener("scroll", function () {
+    nav.classList.toggle("scrolled", window.scrollY > 10);
+  }, { passive: true });
 
-  function fadeInSection() {
-      const sectionTop = animationSection.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (sectionTop < windowHeight && !animationTriggered) {
-          animationSection.classList.add('fade-in');
-          animationTriggered = true;
-      }
-  }
-
-  window.addEventListener('scroll', fadeInSection);
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll('section');
-  const windowHeight = window.innerHeight;
-
-  function fadeInSection(section) {
-      const sectionTop = section.getBoundingClientRect().top;
-
-      if (sectionTop < windowHeight) {
-          section.classList.add('fade-in');
-      }
-  }
-
-  sections.forEach(section => {
-      window.addEventListener('scroll', function() {
-          fadeInSection(section);
-      });
+  toggle.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open);
+    toggle.innerHTML = open ? '<i class="bi bi-x-lg"></i>' : '<i class="bi bi-list"></i>';
   });
-});
-const headerElement = document.getElementById('mainHeader');
-headerElement.classList.add('fade-in');
+  links.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.innerHTML = '<i class="bi bi-list"></i>';
+    });
+  });
 
+  // Reveal on scroll + active nav link
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 
-     function submitForm(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Get the submit button and add a loading state
-            const submitButton = document.getElementById("submitButton");
-            submitButton.disabled = true;
-            submitButton.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...`;
-
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://formspree.io/f/xnnnkkpq");
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.onload = function () {
-                submitButton.disabled = false;
-                submitButton.innerHTML = `<i class="fas fa-paper-plane me-2"></i>Submit`; // Reset the submit button text
-                if (xhr.status === 200) {
-                    // Show SweetAlert2 success message
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Your message has been successfully submitted. Thank you!',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    }).then(() => {
-                        // Reset the form after user closes the alert
-                        document.getElementById("contactForm").reset();
-                    });
-                } else {
-                    // Show SweetAlert2 error message
-                    Swal.fire({
-                        title: 'Error!',
-                        text: 'Something went wrong. Please try again later.',
-                        icon: 'error',
-                        confirmButtonText: 'OK'
-                    });
-                }
-            };
-
-            // Collect form data and send request
-            var formData = new FormData(document.getElementById("contactForm"));
-            xhr.send(JSON.stringify(Object.fromEntries(formData)));
+    var navMap = {};
+    links.querySelectorAll('a[href^="#"]').forEach(function (a) { navMap[a.getAttribute("href").slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var a = navMap[e.target.id];
+        if (!a) return;
+        if (e.isIntersecting) {
+          Object.keys(navMap).forEach(function (k) { navMap[k].classList.remove("active"); });
+          a.classList.add("active");
         }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    document.querySelectorAll("main section[id]").forEach(function (s) { spy.observe(s); });
+  } else {
+    document.documentElement.classList.add("no-js");
+  }
+
+  // Hero console: animated ATP test sequence
+  var consoleBody = document.getElementById("consoleBody");
+  var steps = [
+    ["Power-up 28 V DC", "PASS"],
+    ["Insulation check", "PASS"],
+    ["Discrete I/O loopback", "PASS"],
+    ["Serial link self-test", "PASS"],
+    ["Analog channels ±0.5%", "PASS"]
+  ];
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function line(n, label, verdict, cls) {
+    var li = document.createElement("li");
+    li.innerHTML = '<span><span class="step">' + n + "</span>" + label + '</span><span class="' + cls + '">' + verdict + "</span>";
+    return li;
+  }
+
+  function renderStatic() {
+    consoleBody.innerHTML = "";
+    steps.forEach(function (s, i) { consoleBody.appendChild(line(String(i + 1).padStart(2, "0"), s[0], s[1], "ok")); });
+    var sum = line("", "Sequence complete", steps.length + "/" + steps.length + " PASS", "ok");
+    sum.classList.add("sum");
+    consoleBody.appendChild(sum);
+  }
+
+  function runSequence() {
+    consoleBody.innerHTML = "";
+    var i = 0;
+    (function next() {
+      if (i < steps.length) {
+        var n = String(i + 1).padStart(2, "0");
+        var li = line(n, steps[i][0], "RUN…", "run");
+        consoleBody.appendChild(li);
+        var s = steps[i];
+        setTimeout(function () {
+          var v = li.querySelector(".run");
+          v.textContent = s[1];
+          v.className = "ok";
+          i++;
+          setTimeout(next, 260);
+        }, 650);
+      } else {
+        var sum = line("", "Sequence complete", steps.length + "/" + steps.length + " PASS", "ok");
+        sum.classList.add("sum");
+        consoleBody.appendChild(sum);
+        setTimeout(runSequence, 4200);
+      }
+    })();
+  }
+
+  if (consoleBody) { reduce ? renderStatic() : runSequence(); }
+
+  // Contact form (Formspree)
+  var form = document.getElementById("contactForm");
+  var btn = document.getElementById("submitButton");
+  var status = document.getElementById("formStatus");
+  var btnLabel = btn.innerHTML;
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    status.textContent = "";
+    status.className = "form-status";
+
+    var bad = false;
+    form.querySelectorAll("[required]").forEach(function (f) {
+      var invalid = !f.value.trim() || (f.type === "email" && !/^\S+@\S+\.\S+$/.test(f.value));
+      f.classList.toggle("invalid", invalid);
+      if (invalid) bad = true;
+    });
+    if (bad) {
+      status.textContent = "Please fill in your name, a valid email and a message.";
+      status.classList.add("err");
+      return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="bi bi-hourglass-split"></i>Sending…';
+
+    fetch("https://formspree.io/f/xnnnkkpq", {
+      method: "POST",
+      headers: { "Accept": "application/json", "Content-Type": "application/json" },
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      form.reset();
+      status.textContent = "Message sent — thank you! I'll reply soon.";
+      status.classList.add("ok");
+    }).catch(function () {
+      status.textContent = "Something went wrong. Please email me directly at taoufik.rachdi@enis.tn.";
+      status.classList.add("err");
+    }).finally(function () {
+      btn.disabled = false;
+      btn.innerHTML = btnLabel;
+    });
+  });
+})();
