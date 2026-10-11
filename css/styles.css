@@ -498,9 +498,17 @@ body {
 .chip .portrait { width: 100%; }
 .hero .stats { padding: 0; }
 @media (max-width: 860px) {
-  .chip { width: 236px; }
+  .chip { width: 170px; padding: 0 13px; }
+  .pins { width: 10px; top: 14px; bottom: 14px; }
+  .pins-l { left: 2px; }
+  .pins-r { right: 2px; }
+  .pins::before { background: repeating-linear-gradient(180deg, #c3cddb 0 4px, #8f9cb0 4px 6px, transparent 6px 15px); }
+  .pin1 { top: 9px; left: 21px; width: 7px; height: 7px; }
+  .chip-label { font-size: 10px; white-space: nowrap; margin-left: -40px; margin-right: -40px; }
   .chip .portrait { width: 100%; }
-  .role-card { margin-top: 16px; }
+  .role-card { margin-top: 14px; width: auto; max-width: 100%; padding: 10px 14px; }
+  .role-card img { height: 20px; }
+  .role-card span { font-size: 12px; }
 }
 @media (max-width: 600px) {
   .hero .stats { padding: 0; }
