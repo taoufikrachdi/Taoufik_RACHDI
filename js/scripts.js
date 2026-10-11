@@ -175,6 +175,23 @@
   // Experience: animated progress bar + role boxes
   document.documentElement.classList.add("js");
   var roleLists = document.querySelectorAll(".roles");
+  roleLists.forEach(function (list) {
+    var spark = document.createElement("span");
+    spark.className = "spark"; spark.setAttribute("aria-hidden", "true");
+    list.appendChild(spark);
+    list.querySelectorAll(".role").forEach(function (role) {
+      var i = 0;
+      role.querySelectorAll(".badge, h4, .role-ctx, .role-period, .checks li, .tags span").forEach(function (el) {
+        el.style.setProperty("--i", i++);
+      });
+    });
+  });
+  if ("IntersectionObserver" in window) {
+    var cio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); cio.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".company").forEach(function (c) { cio.observe(c); });
+  }
   var updateRoles = function () {
     var mid = window.innerHeight * 0.65;
     roleLists.forEach(function (list) {

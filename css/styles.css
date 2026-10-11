@@ -737,7 +737,7 @@ body {
 }
 .role:first-child::before { top: 34px; }
 .role:last-child::before { bottom: auto; height: 34px; }
-.role:only-child::before { display: none; }
+.role:only-of-type::before { display: none; }
 .role::after {
   content: ""; position: absolute; left: 1px; top: 30px; width: 14px; height: 14px; border-radius: 50%;
   background: #fff; border: 3px solid #c9d3e2;
@@ -781,7 +781,7 @@ body {
   box-shadow: 0 0 10px rgba(200, 134, 47, 0.45);
   transition: height .25s linear;
 }
-.roles:has(.role:only-child)::before, .roles:has(.role:only-child)::after { display: none; }
+.roles:has(.role:only-of-type)::before, .roles:has(.role:only-of-type)::after { display: none; }
 
 .role {
   margin-left: 34px; padding: 22px 24px;
@@ -802,8 +802,8 @@ body {
 .role:hover { border-color: #d3dceb; box-shadow: 0 2px 4px rgba(15, 27, 45, 0.04), 0 14px 32px rgba(15, 27, 45, 0.09); transform: translateY(-2px); }
 .role.current { background: linear-gradient(180deg, #fffaf3 0%, #fff 40%); border-color: #f0dcc0; }
 .role .role-period { padding-top: 28px; }
-.roles:has(.role:only-child) .role { margin-left: 0; }
-.roles:has(.role:only-child) .role::after { display: none; }
+.roles:has(.role:only-of-type) .role { margin-left: 0; }
+.roles:has(.role:only-of-type) .role::after { display: none; }
 
 /* entrance: boxes slide in one by one */
 @media (prefers-reduced-motion: no-preference) {
@@ -820,4 +820,61 @@ body {
   .role { margin-left: 24px; padding: 18px; }
   .role::after { left: -24px; top: 20px; width: 14px; height: 14px; }
   .role .role-period { padding-top: 0; }
+}
+
+/* ==========================================================
+   Experience — extra motion
+   ========================================================== */
+.spark { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  /* signal pulse travelling down the filled copper bar */
+  .spark {
+    display: block; position: absolute; left: 33px; top: 44px; z-index: 2;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: #fff3e0; box-shadow: 0 0 0 3px rgba(200, 134, 47, 0.35), 0 0 14px 4px rgba(232, 160, 70, 0.85);
+    opacity: 0; pointer-events: none;
+    animation: spark 2.4s cubic-bezier(.45, 0, .55, 1) infinite;
+  }
+  .roles:has(.role:only-of-type) .spark { display: none; }
+
+  /* company header: logo pops in, title slides */
+  .company .company-logo { transform: scale(.6) rotate(-12deg); opacity: 0; transition: transform .7s cubic-bezier(.2, 1.4, .3, 1), opacity .5s; }
+  .company .company-info, .company .company-period { opacity: 0; transform: translateY(8px); transition: opacity .6s ease .15s, transform .6s ease .15s; }
+  .company.in .company-logo { transform: none; opacity: 1; }
+  .company.in .company-info, .company.in .company-period { opacity: 1; transform: none; }
+  .company.in .company-period { transition-delay: .3s; }
+
+  /* inside each role box: badge, title, bullets, tags appear one after another */
+  .js .role .badge, .js .role h4, .js .role .role-ctx, .js .role .role-period,
+  .js .role .checks li, .js .role .tags span {
+    opacity: 0; transform: translateY(8px);
+  }
+  .js .role .tags span { transform: scale(.7); }
+  .js .role.shown .badge, .js .role.shown h4, .js .role.shown .role-ctx, .js .role.shown .role-period,
+  .js .role.shown .checks li, .js .role.shown .tags span {
+    opacity: 1; transform: none;
+    transition: opacity .45s ease, transform .5s cubic-bezier(.2, 1.2, .3, 1);
+    transition-delay: calc(var(--i, 0) * 70ms + 150ms);
+  }
+  .js .role.shown .tags span:hover { transform: translateY(-2px); transition-delay: 0s; }
+
+  /* bullet check marks pop */
+  .js .role.shown .checks li::before { animation: checkPop .5s cubic-bezier(.2, 1.6, .3, 1) both; animation-delay: calc(var(--i, 0) * 70ms + 250ms); }
+
+  /* live badge dot breathes */
+  .badge-live .dot { animation: liveDot 1.6s ease-in-out infinite; }
+
+}
+
+@keyframes spark {
+  0% { top: 44px; opacity: 0; }
+  10% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { top: calc(44px + (100% - 88px) * var(--fill-n, 0)); opacity: 0; }
+}
+@keyframes checkPop { from { transform: scale(0); } to { transform: scale(1); } }
+@keyframes liveDot { 50% { box-shadow: 0 0 0 6px rgba(34, 163, 90, 0.08); transform: scale(1.15); } }
+
+@media (max-width: 860px) {
+  .spark { left: 18px; }
 }
