@@ -156,6 +156,21 @@
 
   if (consoleBody) { reduce ? renderStatic() : runSequence(); }
 
+
+  // Experience durations (inclusive months, LinkedIn style)
+  function ym(str) { var p = str.split("-"); return { y: +p[0], m: +p[1] }; }
+  document.querySelectorAll(".duration[data-start]").forEach(function (el) {
+    var a = ym(el.dataset.start);
+    var now = new Date();
+    var b = el.dataset.end ? ym(el.dataset.end) : { y: now.getFullYear(), m: now.getMonth() + 1 };
+    var months = (b.y - a.y) * 12 + (b.m - a.m) + 1;
+    if (months < 1) months = 1;
+    var y = Math.floor(months / 12), m = months % 12, out = [];
+    if (y) out.push(y + (y > 1 ? " yrs" : " yr"));
+    if (m) out.push(m + (m > 1 ? " mos" : " mo"));
+    el.textContent = out.join(" ");
+  });
+
   // Contact form (Formspree)
   var form = document.getElementById("contactForm");
   var btn = document.getElementById("submitButton");

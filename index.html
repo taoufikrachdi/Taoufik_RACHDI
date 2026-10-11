@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <link href="css/styles.css?v=10" rel="stylesheet" />
+  <link href="css/styles.css?v=11" rel="stylesheet" />
 </head>
 <body id="top">
 
@@ -205,87 +205,118 @@
           <h2>Experience</h2>
         </div>
 
-        <ol class="timeline">
-          <li class="tl-item current reveal">
-            <div class="tl-date">Sep 2026 — Present</div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div>
-                  <span class="badge badge-live"><span class="dot"></span>Current role</span>
-                  <h3>Test Bench Engineer — Test Bench Design &amp; PCB Development</h3>
-                  <p class="tl-org">SERMA Group · Aeronautics · Ariana, Tunisia (hybrid)</p>
-                </div>
-                <img class="tl-logo" src="assets/serma-group-gris.png" alt="SERMA Group" />
+        <div class="exp">
+          <!-- SERMA: grouped roles -->
+          <article class="company reveal">
+            <header class="company-head">
+              <div class="company-logo"><img src="assets/serma-group-gris.png" alt="SERMA Group" /></div>
+              <div class="company-info">
+                <h3>SERMA Group</h3>
+                <p>Engineering, test &amp; qualification · Ariana, Tunisia · Hybrid</p>
               </div>
-              <ul>
-                <li>Design and build test benches for acceptance testing and validation of aeronautical equipment.</li>
-                <li>Define the bench architecture: hardware interfaces, instrumentation, power supplies, signal conditioning and communication links.</li>
-                <li>Translate ATPs (Acceptance Test Procedures) into automated test sequences — repeatable and traceable runs.</li>
-                <li>Design interface PCBs in KiCad end to end: schematic, component selection, placement, routing, DRC and manufacturing files.</li>
-                <li>Bring up and debug new boards through electrical measurements, up to full functional validation.</li>
-              </ul>
-              <div class="tags"><span>KiCad</span><span>PCB design</span><span>PCB bring-up</span><span>Test bench</span><span>ATP</span><span>Signal conditioning</span><span>Instrumentation</span></div>
-            </div>
-          </li>
+              <div class="company-period">
+                <span class="period" data-start="2023-07">Jul 2023 – Present</span>
+                <span class="duration" data-start="2023-07"></span>
+              </div>
+            </header>
 
-          <li class="tl-item reveal">
-            <div class="tl-date">Jul 2024 — Sep 2026</div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div>
-                  <span class="badge">Lead · Client mission</span>
-                  <h3>Lead — Diagnostic (Diag/DTC) &amp; PVS Digital Avatar</h3>
-                  <p class="tl-org">SERMA · Client: Renault Alliance · IVI 2 In-Vehicle Infotainment</p>
+            <ol class="roles">
+              <li class="role current">
+                <div class="role-head">
+                  <div>
+                    <span class="badge badge-live"><span class="dot"></span>Current role</span>
+                    <h4>Test Bench Engineer — Test Bench Design &amp; PCB Development</h4>
+                    <p class="role-ctx">Aeronautical equipment</p>
+                  </div>
+                  <div class="role-period">
+                    <span class="period">Sep 2026 – Present</span>
+                    <span class="duration" data-start="2026-09"></span>
+                  </div>
                 </div>
-              </div>
-              <ul>
-                <li>Led validation of the Diag/DTC and Digital Avatar functions: test strategy, planning, requirement traceability.</li>
-                <li>Built automated test suites with Robot Framework and Selenium.</li>
-                <li>Wrote and reviewed PVAL validation plans; ran campaigns in Codebeamer; managed defects in Jira.</li>
-                <li>CAN and diagnostic analysis with CANalyzer, CANoe and Wireshark; CAPL and Bash scripting.</li>
-              </ul>
-              <div class="tags"><span>Robot Framework</span><span>Selenium</span><span>Codebeamer</span><span>Jira</span><span>CANoe</span><span>CANalyzer</span><span>CAPL</span><span>Wireshark</span></div>
-            </div>
-          </li>
+                <ul class="checks">
+                  <li>Design and build test benches for acceptance testing and validation of aeronautical equipment.</li>
+                  <li>Define the bench architecture: hardware interfaces, instrumentation, power supplies, signal conditioning and communication links.</li>
+                  <li>Translate ATPs (Acceptance Test Procedures) into automated test sequences — repeatable and traceable runs.</li>
+                  <li>Design interface PCBs in KiCad end to end: schematic, component selection, placement, routing, DRC and manufacturing files.</li>
+                  <li>Bring up and debug new boards through electrical measurements, up to full functional validation.</li>
+                </ul>
+                <div class="tags"><span>KiCad</span><span>PCB design</span><span>PCB bring-up</span><span>Test bench</span><span>ATP</span><span>Signal conditioning</span><span>Instrumentation</span></div>
+              </li>
 
-          <li class="tl-item reveal">
-            <div class="tl-date">Jul 2023 — Jul 2024</div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div>
-                  <span class="badge">Client mission</span>
-                  <h3>Validation Engineer — Diag/DTC Function</h3>
-                  <p class="tl-org">SERMA · Client: Renault-Nissan-Mitsubishi Alliance · IVI 2</p>
+              <li class="role">
+                <div class="role-head">
+                  <div>
+                    <span class="badge">Lead · Client mission</span>
+                    <h4>Lead — Diagnostic (Diag/DTC) &amp; PVS Digital Avatar</h4>
+                    <p class="role-ctx">Client: Renault Alliance · IVI 2 In-Vehicle Infotainment</p>
+                  </div>
+                  <div class="role-period">
+                    <span class="period">Jul 2024 – Sep 2026</span>
+                    <span class="duration" data-start="2024-07" data-end="2026-09"></span>
+                  </div>
                 </div>
-              </div>
-              <ul>
-                <li>Functional and non-functional test campaigns in Silk Central.</li>
-                <li>Integration, regression and validation testing.</li>
-                <li>CAPL scripts for CAN test automation; XML diagnostic scripts with DDT2000.</li>
-              </ul>
-              <div class="tags"><span>Silk Central</span><span>CAPL</span><span>DDT2000</span><span>UDS</span><span>CAN</span></div>
-            </div>
-          </li>
+                <ul class="checks">
+                  <li>Led validation of the Diag/DTC and Digital Avatar functions: test strategy, planning, requirement traceability.</li>
+                  <li>Built automated test suites with Robot Framework and Selenium.</li>
+                  <li>Wrote and reviewed PVAL validation plans; ran campaigns in Codebeamer; managed defects in Jira.</li>
+                  <li>CAN and diagnostic analysis with CANalyzer, CANoe and Wireshark; CAPL and Bash scripting.</li>
+                </ul>
+                <div class="tags"><span>Robot Framework</span><span>Selenium</span><span>Codebeamer</span><span>Jira</span><span>CANoe</span><span>CANalyzer</span><span>CAPL</span><span>Wireshark</span></div>
+              </li>
 
-          <li class="tl-item reveal">
-            <div class="tl-date">Feb 2023 — Jun 2023</div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div>
-                  <span class="badge">Engineering project</span>
-                  <h3>Final Year Project — IoT Gas &amp; Fire Detection</h3>
-                  <p class="tl-org">Smart Ways Innovation · Sfax, Tunisia</p>
+              <li class="role">
+                <div class="role-head">
+                  <div>
+                    <span class="badge">Client mission</span>
+                    <h4>Validation Engineer — Diag/DTC Function</h4>
+                    <p class="role-ctx">Client: Renault-Nissan-Mitsubishi Alliance · IVI 2</p>
+                  </div>
+                  <div class="role-period">
+                    <span class="period">Jul 2023 – Jul 2024</span>
+                    <span class="duration" data-start="2023-07" data-end="2024-07"></span>
+                  </div>
                 </div>
+                <ul class="checks">
+                  <li>Functional and non-functional test campaigns in Silk Central.</li>
+                  <li>Integration, regression and validation testing.</li>
+                  <li>CAPL scripts for CAN test automation; XML diagnostic scripts with DDT2000.</li>
+                </ul>
+                <div class="tags"><span>Silk Central</span><span>CAPL</span><span>DDT2000</span><span>UDS</span><span>CAN</span></div>
+              </li>
+            </ol>
+          </article>
+
+          <!-- Final year project -->
+          <article class="company reveal">
+            <header class="company-head">
+              <div class="company-logo initials">SW</div>
+              <div class="company-info">
+                <h3>Smart Ways Innovation</h3>
+                <p>Sfax, Tunisia</p>
               </div>
-              <ul>
-                <li>ESP32-based detection system with gas, flame and DHT11 sensors.</li>
-                <li>Custom PCB designed in Altium Designer.</li>
-                <li>Companion mobile app and web platform (Android Studio, Angular, Laravel).</li>
-              </ul>
-              <div class="tags"><span>ESP32</span><span>Altium Designer</span><span>Angular</span><span>Laravel</span><span>Android</span></div>
-            </div>
-          </li>
-        </ol>
+              <div class="company-period">
+                <span class="period">Feb 2023 – Jun 2023</span>
+                <span class="duration" data-start="2023-02" data-end="2023-06"></span>
+              </div>
+            </header>
+            <ol class="roles">
+              <li class="role">
+                <div class="role-head">
+                  <div>
+                    <span class="badge">Engineering project</span>
+                    <h4>Final Year Project — IoT Gas &amp; Fire Detection</h4>
+                  </div>
+                </div>
+                <ul class="checks">
+                  <li>ESP32-based detection system with gas, flame and DHT11 sensors.</li>
+                  <li>Custom PCB designed in Altium Designer.</li>
+                  <li>Companion mobile app and web platform (Android Studio, Angular, Laravel).</li>
+                </ul>
+                <div class="tags"><span>ESP32</span><span>Altium Designer</span><span>Angular</span><span>Laravel</span><span>Android</span></div>
+              </li>
+            </ol>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -435,6 +466,6 @@
     </div>
   </footer>
 
-  <script src="js/scripts.js?v=10"></script>
+  <script src="js/scripts.js?v=11"></script>
 </body>
 </html>
