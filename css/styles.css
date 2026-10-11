@@ -962,3 +962,9 @@ a, button { -webkit-tap-highlight-color: transparent; }
 /* Studio portrait (light background) */
 .chip .portrait { background: #eef1f5; }
 .chip .portrait img { object-fit: cover; object-position: 50% 30%; }
+
+/* Pins stop at the bottom edge of the photo (not beside the label), evenly spaced */
+.pins { top: 28px; bottom: 52px; }
+@media (max-width: 860px) {
+  .pins { top: 12px; bottom: 33px; }
+}
