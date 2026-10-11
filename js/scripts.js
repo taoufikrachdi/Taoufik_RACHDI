@@ -28,6 +28,16 @@
     });
   });
 
+  // Back to top: the header is sticky, so an anchor to it never scrolls — scroll the window instead
+  document.querySelectorAll('a[href="#top"]').forEach(function (a) {
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+      if (history.replaceState) history.replaceState(null, "", location.pathname + location.search);
+    });
+  });
+
   // Reveal on scroll + active nav link
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
