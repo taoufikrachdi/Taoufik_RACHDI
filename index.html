@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <link href="css/styles.css?v=8" rel="stylesheet" />
+  <link href="css/styles.css?v=9" rel="stylesheet" />
 </head>
 <body id="top">
 
@@ -72,9 +72,17 @@
           <path d="M1400 520 H1300 M1300 505 V535 L1270 520 Z M1270 505 V535 M1270 520 H1180" />
           <text x="1270" y="495">D1</text>
         </g>
+              <g class="pulses">
+          <circle r="3.5"><animateMotion dur="3.2s" repeatCount="indefinite" path="M40 35 H560 l8 -12 l16 24 l16 -24 l16 24 l16 -24 l16 24 l8 -12 H700 V95 H760" /></circle>
+          <circle r="3.5"><animateMotion dur="2.6s" begin="0.8s" repeatCount="indefinite" path="M40 560 H300 L340 520 H560" /></circle>
+          <circle r="3"><animateMotion dur="2.4s" repeatCount="indefinite" path="M1400 120 H1250 V260 H1180" /></circle>
+          <circle r="3"><animateMotion dur="2.4s" begin="0.6s" repeatCount="indefinite" path="M1400 150 H1270 V280 H1180" /></circle>
+          <circle r="3"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M1400 180 H1290 V300 H1180" /></circle>
+          <circle r="3"><animateMotion dur="2.8s" begin="0.4s" repeatCount="indefinite" path="M1400 520 H1180" /></circle>
+        </g>
       </svg>
       <div class="wrap hero-grid">
-        <div class="hero-text reveal">
+        <div class="hero-text">
           <p class="eyebrow"><span class="led"></span>Currently at SERMA Group · Aeronautics</p>
           <h1>Taoufik Rachdi</h1>
           <p class="h1-sub">Test Bench Engineer — Test Bench Design &amp; PCB Development</p>
@@ -93,10 +101,11 @@
           </ul>
         </div>
 
-        <div class="hero-visual reveal">
+        <div class="hero-visual">
           <div class="chip">
             <span class="pins pins-l"></span><span class="pins pins-r"></span>
             <span class="pin1"></span>
+            <span class="scanline"></span>
             <div class="portrait">
             <img src="assets/profile-cutout.webp" alt="Portrait of Taoufik Rachdi" width="537" height="820" />
             </div>
@@ -419,6 +428,6 @@
     </div>
   </footer>
 
-  <script src="js/scripts.js?v=8"></script>
+  <script src="js/scripts.js?v=9"></script>
 </body>
 </html>

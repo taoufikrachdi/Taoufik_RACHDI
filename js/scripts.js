@@ -64,6 +64,46 @@
     document.documentElement.classList.add("no-js");
   }
 
+
+  // Experience: copper trace fills as you scroll through the timeline
+  var timeline = document.querySelector(".timeline");
+  if (timeline) {
+    var ticking = false;
+    var updateFill = function () {
+      ticking = false;
+      var r = timeline.getBoundingClientRect();
+      var mid = window.innerHeight * 0.6;
+      var pct = Math.max(0, Math.min(1, (mid - r.top) / r.height));
+      timeline.style.setProperty("--fill", (pct * 100).toFixed(1) + "%");
+      timeline.querySelectorAll(".tl-item").forEach(function (li) {
+        li.classList.toggle("lit", li.getBoundingClientRect().top + 30 < mid);
+      });
+    };
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(updateFill); }
+    }, { passive: true });
+    updateFill();
+  }
+
+  // Datasheet numbers count up once
+  var motionOK = !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  if (motionOK) {
+    document.querySelectorAll(".stat-n").forEach(function (el) {
+      var m = el.textContent.match(/^(\d+)(.*)$/);
+      if (!m) return;
+      var target = parseInt(m[1], 10), suffix = m[2], start = null;
+      el.textContent = "0" + suffix;
+      setTimeout(function () {
+        requestAnimationFrame(function step(t) {
+          if (!start) start = t;
+          var k = Math.min(1, (t - start) / 900);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - k, 3))) + suffix;
+          if (k < 1) requestAnimationFrame(step);
+        });
+      }, 1100);
+    });
+  }
+
   // Hero console: animated ATP test sequence
   var consoleBody = document.getElementById("consoleBody");
   var steps = [
