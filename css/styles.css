@@ -958,3 +958,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .param-v .stat-n, .param-text { font-size: 1.6rem; }
   .param::after { left: 18px; right: 18px; }
 }
+
+/* Studio portrait (light background) */
+.chip .portrait { background: #eef1f5; }
+.chip .portrait img { object-fit: cover; object-position: 50% 30%; }
