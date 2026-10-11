@@ -903,3 +903,12 @@ body {
 @media (max-width: 600px) {
   .to-top { right: 16px; bottom: 16px; width: 48px; height: 48px; }
 }
+
+/* No blue flash/highlight when tapping the back-to-top button */
+.to-top, .to-top:hover, .to-top:active, .to-top:focus { background: var(--navy); color: #fff; -webkit-tap-highlight-color: transparent; outline: none; }
+.to-top:active { transform: scale(.94); }
+@media (hover: hover) and (pointer: fine) {
+  .to-top:hover { background: var(--navy-2); }
+}
+.to-top:focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; }
+a, button { -webkit-tap-highlight-color: transparent; }

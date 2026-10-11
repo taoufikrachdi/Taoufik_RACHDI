@@ -35,6 +35,7 @@
       var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
       if (history.replaceState) history.replaceState(null, "", location.pathname + location.search);
+      if (a.blur) a.blur();
     });
   });
 
