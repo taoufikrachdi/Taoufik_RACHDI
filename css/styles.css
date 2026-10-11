@@ -765,3 +765,59 @@ body {
   .role .role-period { order: -1; padding-top: 0; flex-direction: row; gap: 10px; align-items: baseline; }
   .role::after { top: 28px; }
 }
+
+/* ==========================================================
+   Experience — each role in its own box, animated progress bar
+   ========================================================== */
+.roles { padding: 24px 30px 28px 30px; display: grid; gap: 18px; --fill: 0%; }
+/* track + animated copper fill */
+.roles::before, .roles::after {
+  content: ""; position: absolute; left: 37px; top: 44px; width: 3px; border-radius: 3px;
+}
+.roles::before { bottom: 44px; background: #e4e9f1; }
+.roles::after {
+  height: calc((100% - 88px) * var(--fill-n, 0));
+  background: linear-gradient(180deg, #e3a95b, var(--copper));
+  box-shadow: 0 0 10px rgba(200, 134, 47, 0.45);
+  transition: height .25s linear;
+}
+.roles:has(.role:only-child)::before, .roles:has(.role:only-child)::after { display: none; }
+
+.role {
+  margin-left: 34px; padding: 22px 24px;
+  background: #fff; border: 1px solid #e4e9f1; border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(15, 27, 45, 0.03), 0 6px 18px rgba(15, 27, 45, 0.05);
+  transition: border-color .3s, box-shadow .3s, transform .3s;
+}
+.role + .role { border-top: 1px solid #e4e9f1; }
+.role::before { display: none; }
+.role::after {
+  left: -34px; top: 24px; width: 16px; height: 16px; z-index: 1;
+  border: 3px solid #c9d3e2; background: #fff;
+  transition: background .35s, border-color .35s, box-shadow .35s, transform .35s;
+}
+.role.lit::after { border-color: var(--copper); background: #fff; box-shadow: 0 0 0 4px #fbeedd; transform: scale(1.1); }
+.role.current::after, .role.current.lit::after { background: var(--copper); border-color: var(--copper); box-shadow: 0 0 0 4px #fbeedd, 0 0 12px rgba(200, 134, 47, 0.6); }
+.role.lit { border-color: #ecd9bf; }
+.role:hover { border-color: #d3dceb; box-shadow: 0 2px 4px rgba(15, 27, 45, 0.04), 0 14px 32px rgba(15, 27, 45, 0.09); transform: translateY(-2px); }
+.role.current { background: linear-gradient(180deg, #fffaf3 0%, #fff 40%); border-color: #f0dcc0; }
+.role .role-period { padding-top: 28px; }
+.roles:has(.role:only-child) .role { margin-left: 0; }
+.roles:has(.role:only-child) .role::after { display: none; }
+
+/* entrance: boxes slide in one by one */
+@media (prefers-reduced-motion: no-preference) {
+  .js .role { opacity: 0; transform: translateX(-16px); }
+  .js .role.shown { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s cubic-bezier(.2, .7, .2, 1), border-color .3s, box-shadow .3s; }
+  .js .role.shown:hover { transform: translateY(-2px); }
+  .role.current.lit::after { animation: livePulse 2s ease-in-out infinite; }
+}
+@keyframes livePulse { 50% { box-shadow: 0 0 0 8px rgba(200, 134, 47, 0.12), 0 0 16px rgba(200, 134, 47, 0.7); } }
+
+@media (max-width: 860px) {
+  .roles { padding: 18px 16px 20px 16px; gap: 14px; }
+  .roles::before, .roles::after { left: 22px; }
+  .role { margin-left: 24px; padding: 18px; }
+  .role::after { left: -24px; top: 20px; width: 14px; height: 14px; }
+  .role .role-period { padding-top: 0; }
+}

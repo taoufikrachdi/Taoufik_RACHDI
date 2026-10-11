@@ -171,6 +171,31 @@
     el.textContent = out.join(" ");
   });
 
+
+  // Experience: animated progress bar + role boxes
+  document.documentElement.classList.add("js");
+  var roleLists = document.querySelectorAll(".roles");
+  var updateRoles = function () {
+    var mid = window.innerHeight * 0.65;
+    roleLists.forEach(function (list) {
+      var r = list.getBoundingClientRect();
+      var span = r.height - 88;
+      var n = span > 0 ? Math.max(0, Math.min(1, (mid - r.top - 44) / span)) : 0;
+      list.style.setProperty("--fill-n", n.toFixed(3));
+      list.querySelectorAll(".role").forEach(function (role) {
+        var t = role.getBoundingClientRect().top;
+        role.classList.toggle("lit", t + 24 < mid);
+        if (t < window.innerHeight * 0.92) role.classList.add("shown");
+      });
+    });
+  };
+  var rolesTick = false;
+  window.addEventListener("scroll", function () {
+    if (!rolesTick) { rolesTick = true; requestAnimationFrame(function () { rolesTick = false; updateRoles(); }); }
+  }, { passive: true });
+  window.addEventListener("resize", updateRoles);
+  updateRoles();
+
   // Contact form (Formspree)
   var form = document.getElementById("contactForm");
   var btn = document.getElementById("submitButton");
