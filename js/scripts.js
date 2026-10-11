@@ -213,6 +213,23 @@
   window.addEventListener("resize", updateRoles);
   updateRoles();
 
+
+  // Floating back-to-top: visible as soon as you scroll, ring shows progress
+  var toTop = document.getElementById("toTop");
+  var ring = document.getElementById("toTopRing");
+  if (toTop) {
+    var C = 2 * Math.PI * 21;
+    var updateTop = function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? window.scrollY / max : 0;
+      toTop.classList.toggle("show", window.scrollY > 200);
+      if (ring) ring.style.strokeDashoffset = (C * (1 - p)).toFixed(2);
+    };
+    window.addEventListener("scroll", updateTop, { passive: true });
+    window.addEventListener("resize", updateTop);
+    updateTop();
+  }
+
   // Contact form (Formspree)
   var form = document.getElementById("contactForm");
   var btn = document.getElementById("submitButton");
