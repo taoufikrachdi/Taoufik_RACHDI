@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <link href="css/styles.css?v=5" rel="stylesheet" />
+  <link href="css/styles.css?v=6" rel="stylesheet" />
 </head>
 <body>
 
@@ -43,6 +43,36 @@
   <main>
     <!-- Hero -->
     <section class="hero">
+      <svg class="schematic" aria-hidden="true" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice">
+        <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <g transform="translate(0,-55)">
+          <!-- VCC rail -->
+          <path d="M40 90 H520" />
+          <path d="M60 90 V70 M50 70 H70" />
+          <text x="76" y="74">+3V3</text>
+          <!-- resistor R1 -->
+          <path d="M520 90 H560 l8 -12 l16 24 l16 -24 l16 24 l16 -24 l16 24 l8 -12 H700 V150" />
+          <text x="582" y="70">R1 10k</text>
+          <!-- capacitor C1 to ground -->
+          <path d="M700 150 H760 M760 130 V170 M776 130 V170 M776 150 H830 V200" />
+          <path d="M812 200 H848 M818 210 H842 M825 220 H835" />
+          <text x="748" y="122">C1 100n</text>
+          </g>
+          <!-- signal net into connector -->
+          <path d="M40 560 H300 L340 520 H560" />
+          <circle cx="560" cy="520" r="5" class="pad" />
+          <text x="60" y="548">ATP_SEQ</text>
+          <!-- right side bus -->
+          <path d="M1400 120 H1250 V260 H1180" />
+          <path d="M1400 150 H1270 V280 H1180" />
+          <path d="M1400 180 H1290 V300 H1180" />
+          <circle cx="1180" cy="260" r="4" class="pad" /><circle cx="1180" cy="280" r="4" class="pad" /><circle cx="1180" cy="300" r="4" class="pad" />
+          <text x="1300" y="108">CAN_H / CAN_L / GND</text>
+          <!-- diode D1 -->
+          <path d="M1400 520 H1300 M1300 505 V535 L1270 520 Z M1270 505 V535 M1270 520 H1180" />
+          <text x="1270" y="495">D1</text>
+        </g>
+      </svg>
       <div class="wrap hero-grid">
         <div class="hero-text reveal">
           <p class="eyebrow"><span class="led"></span>Currently at SERMA Group · Aeronautics</p>
@@ -64,8 +94,13 @@
         </div>
 
         <div class="hero-visual reveal">
-          <div class="portrait">
+          <div class="chip">
+            <span class="pins pins-l"></span><span class="pins pins-r"></span>
+            <span class="pin1"></span>
+            <div class="portrait">
             <img src="assets/profile-cutout.webp" alt="Portrait of Taoufik Rachdi" width="537" height="820" />
+            </div>
+            <span class="chip-label">U1 · T.RACHDI · TBE-2026</span>
           </div>
           <div class="role-card">
             <img src="assets/serma-group-gris.png" alt="SERMA Group" />
@@ -78,6 +113,7 @@
       </div>
 
       <div class="wrap stats reveal">
+        <div class="stats-title"><span>Key parameters</span><span>Typ.</span></div>
         <div class="stat"><span class="stat-n">3+</span><span class="stat-l">years in test &amp; validation</span></div>
         <div class="stat"><span class="stat-n">2</span><span class="stat-l">industries · aero &amp; automotive</span></div>
         <div class="stat"><span class="stat-n">KiCad</span><span class="stat-l">interface PCB design</span></div>
@@ -89,6 +125,7 @@
     <section class="section" id="about">
       <div class="wrap about-grid">
         <div class="section-head reveal">
+            <span class="desig">U2</span>
           <h2>About</h2>
         </div>
         <div class="about-body reveal">
@@ -117,6 +154,7 @@
     <section class="section" id="work">
       <div class="wrap">
         <div class="section-head reveal">
+            <span class="desig">U3</span>
           <h2>What I do now</h2>
           <p class="section-sub">Test Bench Engineer — Test Bench Design &amp; PCB Development · SERMA Group</p>
         </div>
@@ -154,6 +192,7 @@
     <section class="section" id="experience">
       <div class="wrap">
         <div class="section-head reveal">
+            <span class="desig">J1</span>
           <h2>Experience</h2>
         </div>
 
@@ -241,6 +280,7 @@
     <section class="section" id="skills">
       <div class="wrap">
         <div class="section-head reveal">
+            <span class="desig">U4</span>
           <h2>Skills</h2>
         </div>
 
@@ -277,6 +317,7 @@
     <section class="section" id="education">
       <div class="wrap">
         <div class="section-head reveal">
+            <span class="desig">J2</span>
           <h2>Education &amp; certifications</h2>
         </div>
 
@@ -324,6 +365,7 @@
       <div class="wrap contact-grid">
         <div class="reveal">
           <div class="section-head">
+            <span class="desig">P1</span>
             <h2>Let's work together</h2>
           </div>
           <p class="contact-lede">Test bench design, PCB work, or test automation — send me a message and I'll get back to you.</p>
@@ -362,13 +404,21 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>&copy; <span id="currentYear"></span> Taoufik Rachdi</span>
-      <span class="mono">Test Bench Engineer · SERMA Group</span>
-      <a href="#top" class="to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+    <div class="wrap">
+      <div class="title-block">
+        <div class="tb-cell tb-main"><span class="tb-k">Title</span><span class="tb-v">Taoufik Rachdi — Portfolio</span></div>
+        <div class="tb-cell"><span class="tb-k">Role</span><span class="tb-v">Test Bench Engineer</span></div>
+        <div class="tb-cell"><span class="tb-k">Company</span><span class="tb-v">SERMA Group</span></div>
+        <div class="tb-cell"><span class="tb-k">Rev</span><span class="tb-v">2026.10</span></div>
+        <div class="tb-cell"><span class="tb-k">Sheet</span><span class="tb-v">1 / 1</span></div>
+      </div>
+      <div class="footer-inner">
+        <span>&copy; <span id="currentYear"></span> Taoufik Rachdi · Ariana, Tunisia</span>
+        <a href="#top" class="to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+      </div>
     </div>
   </footer>
 
-  <script src="js/scripts.js?v=5"></script>
+  <script src="js/scripts.js?v=6"></script>
 </body>
 </html>
